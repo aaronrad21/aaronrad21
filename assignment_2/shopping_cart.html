@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Shopping Cart | Aaron Rad </title>
+
+
+	<style>
+		
+		#header{
+			background-color: #912C2C;
+			color: white;
+			font-size: 32px;
+			height: 100px;
+			line-height: 100px;
+		}
+
+
+		#middle{
+			width: 570px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 50px;
+
+		}
+
+		#footer{
+			background-color: lightgrey;
+			height: 30px;
+			font-size: 12px;
+			line-height: 30px;
+			margin-top: 50px;
+		}
+
+
+		#entire{
+			text-align: center;
+		}
+
+
+		.items{
+			margin: 10px;
+			padding: 10px;
+			width: 150px;
+			height: 180px;
+			float: left;
+			font-size: 14px;
+		}
+
+		.items:hover{
+			opacity: .5;
+		}
+
+		.clearfloat{
+			clear: both;
+		}
+
+
+		.suff_id{
+			width: 140px;
+			height: 140px;
+			margin-bottom: 5px;
+		}
+
+		.items span{
+			margin-top: 10px;
+		}
+
+		
+
+		#subtotal{
+			text-align: right;
+			margin-top: 30px;
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="entire">
+		
+		<div id="header"> My Cart </div>
+
+
+		<div id="middle"> 
+
+
+			<div class="items" id="item_1" > 
+
+				<img src="img/suff_id.JPG" alt="suff_id" class="suff_id" >
+
+				Suffering ID single
+
+				<br>
+
+				<span id="firstitem">$1.29</soan>
+
+			 </div>
+
+			<div class="items" id="item_2" > 
+
+				<img src="img/galaxy.JPG" alt="galaxy" class="suff_id">
+
+				Children of the Universe
+
+				<br>
+
+				<span id="seconditem"> $5.00 </span>
+
+			 </div>
+
+			<div class="items" id="item_3">
+				
+				<img src="img/ticket.JPG" alt="ticket" class="suff_id">
+
+				Concert Ticket
+
+				<br>
+
+				<span id="thirditem">$50</span>
+
+			</div>
+
+
+			<div class="clearfloat"></div>
+
+
+			<div id="subtotal">
+
+				Cart Subtotal: $<span id="total">0</span>
+				
+			</div>
+
+
+		 </div>
+
+
+
+
+		<div id="footer"> &copy 2020 Aaron Rad  </div>
+
+
+	</div>
+
+
+	<script>	
+		
+
+		document.querySelector('#item_1').onclick = function(){
+
+			var firstitemvalue = document.getElementById('firstitem').innerText.replace('$', '');
+			firstitemvalue = parseFloat(firstitemvalue);
+			var startingamount = document.querySelector('#total').innerText;
+			startingamount = parseFloat(startingamount);
+			var totalamount = startingamount + firstitemvalue;
+			totalamount = parseFloat(totalamount).toFixed(2);
+			document.querySelector('#total').innerText = totalamount
+
+		}
+
+		document.querySelector('#item_2').onclick = function(){
+			var seconditemvalue = document.getElementById('seconditem').innerText.replace('$', '');
+			seconditemvalue = parseFloat(seconditemvalue);
+			var startingamount = document.querySelector('#total').innerText;
+			startingamount = parseFloat(startingamount);
+			var totalamount = startingamount + seconditemvalue;
+			totalamount = parseFloat(totalamount).toFixed(2);
+			document.querySelector('#total').innerText = totalamount
+
+		}
+
+
+		document.querySelector('#item_3').onclick = function(){
+			var thriitemvalue = document.getElementById('thirditem').innerText.replace('$','');
+			seconditemvalue = parseFloat(thriitemvalue);
+			var startingamount = document.querySelector('#total').innerText;
+			startingamount = parseFloat(startingamount);
+			var totalamount = startingamount + seconditemvalue;
+			totalamount = parseFloat(totalamount).toFixed(2);
+			document.querySelector('#total').innerText = totalamount
+
+		}
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>

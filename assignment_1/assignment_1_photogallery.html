@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Gallery | Aaron Rad</title>
+
+	<style>
+	
+	#entire{
+		text-align: center;
+	}
+
+	.square{
+		float: left;
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		margin: 5px; 
+	}
+
+	.thumbnails{
+		margin-left: auto;
+		margin-right: auto;
+		width: 960px
+	}
+
+	.clearfloat{
+		clear: both;
+	}
+
+	.main{
+		margin-top: 20px;
+		margin-left: 180px;
+		margin-right: 180px;
+	}
+
+	.boxmain{
+		width: 600px;
+		height: 600px;
+		object-fit: cover;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+</style>
+
+</head>
+
+<body>
+
+	<div id="entire">
+
+		<div class="header">
+			<h1>Baddest Peras</h1>
+		</div>
+		
+		<div class="thumbnails">
+			
+			<img src="img/djaysof.JPG" alt="djaysof" class="square" id="sof" onclick="myFunction(sof)">
+
+			<img src="img/ph.JPG" alt="ph" class="square" id="ph" onclick="myFunction(ph)">
+
+			<img src="img/uglymami.JPG" alt="uglymami" class="square" id="mami" onclick="myFunction(mami)">
+
+			<img src="img/fairy.JPG" alt="fairy" class="square" id="fairy" onclick="myFunction(fairy)">
+
+			<img src="img/zarenae.JPG" alt="zarenae" class="square" id="zarenae" onclick="myFunction(zarenae)">
+
+			<img src="img/eli.JPG" alt="eli" class="square" id="eli" onclick="myFunction(eli)">
+
+		</div>
+
+
+		<div class="clearfloat"></div>
+
+		<div class="main">
+
+			<img src="img/djaysof.JPG" alt="main" class="boxmain" id="mainmain">
+			
+		</div>
+
+
+	</div>
+
+	<script>
+		
+		function myFunction(img) {
+			var expandImg = document.getElementById("mainmain");
+			expandImg.src = img.src;
+			imgText.innerHTML = ass.alt;
+ 			expandImg.parentElement.style.display = "block";
+		};
+			
+
+	</script>
+
+</body>
+</html>

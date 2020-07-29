@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Gallery | Aaron Rad</title>
+
+	<style>
+	
+	#entire{
+		text-align: center;
+		width: 960px;
+
+	}
+
+	.square{
+		float: left;
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		margin: 5px; 
+	}
+
+	.thumbnails{
+		margin-left: auto;
+		margin-right: auto;
+		width: 960px
+	}
+
+	.clearfloat{
+		clear: both;
+	}
+
+	.main{
+		margin-top: 20px;
+		margin-left: 180px;
+		margin-right: 180px;
+	}
+
+	.boxmain{
+		width: 600px;
+		height: 600px;
+		object-fit: cover;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.header{
+		text-align: center;
+	}
+</style>
+
+</head>
+
+<body>
+
+	<div id="entire">
+
+		<div class="header">
+			<h1>Baddest Peras</h1>
+		</div>
+		
+		<div class="thumbnails">
+			
+			<img src="img/pic0.JPG" alt="djaysof" class="square" id="sof">
+
+			<img src="img/pic1.JPG" alt="ph" class="square">
+
+			<img src="img/pic2.JPG" alt="uglymami" class="square" id="mami">
+
+			<img src="img/pic3.JPG" alt="fairy" class="square" id="fairy">
+
+			<img src="img/pic4.JPG" alt="zarenae" class="square" id="zarenae">
+
+			<img src="img/pic5.JPG" alt="eli" class="square" id="eli">
+
+		</div>
+
+
+		<div class="clearfloat"></div>
+
+		<div class="main">
+
+			<img src="img/pic0.JPG" alt="main" class="boxmain" id="mainmain">
+			
+		</div>
+
+
+	</div>
+
+	<script>
+
+
+
+			var girls = document.querySelectorAll(".square");
+			var displayedImage = document.querySelector('#mainmain')
+
+				
+
+			for (let i = 0; i < girls.length; i++) {
+				girls[i].addEventListener('click', function myFunction(event){
+					console.log('clicked');
+					console.log(girls[i])
+
+						displayedImage.src = girls[i].src
+
+				}, false);
+				
+			}
+
+
+
+
+
+
+		
+
+   		/**var girls = document.querySelectorAll(".square");
+		var displayedImage = document.querySelector('#mainmain');
+
+
+		function myFunction(imgs){
+
+		var displayedImage = document.querySelector('#mainmain');
+		displayedImage.src = imgs.src
+
+		}
+
+
+		for (var i = 0; i < girls.length; i++) {
+
+				console.log(girls[i])
+
+   		girls[i].addEventListener("click", function myFunction(imgs){
+
+		var displayedImage = document.querySelector('#mainmain');
+		displayedImage.src = imgs.src
+
+   		});
+
+   		
+
+   		}**/ 
+
+   		
+
+   		
+			
+
+	</script>
+
+</body>
+</html>

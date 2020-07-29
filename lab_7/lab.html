@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Photo Gallery</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		.thumbnail {
+			cursor: pointer;
+		}
+		.thumbnail:hover {
+			opacity: 0.8;
+		}
+		#source-error{
+			color: red;
+		}
+		#thumbnails img{
+			width: 150px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-4">
+			<h1 class="col-12">Dynamic Photo Gallery</h1>
+			<div class="col-12 mt-4">
+				<form id="img-form">
+					<div class="form-row">
+						<div class="col-12 mt-2 col-sm-5 mt-sm-0">
+							<label for="img-src" class="sr-only">Image Source:</label>
+							<input type="text" class="form-control" id="img-src" placeholder="Image Source...">
+							<span id="source-error"></span>
+						</div> <!-- .col -->
+						<div class="col-12 mt-2 col-sm-5 mt-sm-0">
+							<label for="img-alt" class="sr-only">Image Title (alt):</label>
+							<input type="text" class="form-control" id="img-alt" placeholder="Image Title (alt attribute)...">
+						</div> <!-- .col -->
+						<div class="col-12 mt-2 col-sm-auto mt-sm-0">
+							<button role="button" type="submit" class="btn btn-primary" id="addpic">Add</button>
+						</div> <!-- .col -->
+					</div> <!-- .form-row -->
+				</form>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<h2 class="col-12 mt-4">Photo Gallery:</h2>
+
+			<div class="col-10 col-lg-7 ml-auto mr-auto mt-3" id="main-img">
+				<img src="https://admissionblog.usc.edu/files/2016/09/Move-in-day-1024x681.jpg" alt="USC Campus" class="img-fluid" id="mainmain">
+				<h4 class="text-center mt-3">Leavey Library</h4>
+			</div> <!-- .col -->
+
+			<div class="col-12 mt-3">
+				<button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+			</div> <!-- .col -->
+
+			<div class="col-12 mb-5">
+
+				<div id="thumbnails" class="row">
+
+					<div class="col-4 col-md-3 col-lg-2 mt-2 mt-md-3 thumbnail">
+						<img src="img/leavey.jpg" alt="Leavey Fountain" class="img-fluid picker">
+					</div> <!-- .col -->
+
+					<div class="col-4 col-md-3 col-lg-2 mt-2 mt-md-3 thumbnail">
+						<img src="img/football.jpg" alt="USC Football" class="img-fluid picker">
+					</div> <!-- .col -->
+
+					<div class="col-4 col-md-3 col-lg-2 mt-2 mt-md-3 thumbnail">
+						<img src="img/usc_village.jpg" alt="USC Village" class="img-fluid picker">
+					</div> <!-- .col -->
+
+				</div> <!-- #thumbnails -->
+
+			</div> <!-- .col -->
+
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+
+		var x = document.querySelectorAll(".picker")
+		var displayedImage = document.querySelector('#mainmain')
+
+		for (let i=0; i < x.length; i++) {
+			
+			x[i].addEventListener('click',function myFunction(){
+
+				displayedImage.src = x[i].src
+
+			});
+
+
+		}
+		
+		document.querySelector('#img-form').onsubmit = function(){
+
+			var addimage = document.querySelector('#img-src').value.trim()
+			var addalt = document.querySelector('#img-alt').value.trim()
+
+			if (/^$/.test(addimage) == true || /^$/.test(addalt) == true) {
+
+				document.querySelector('#source-error').innerHTML = "Must provide image source and alt attribute"	
+
+			} 
+
+			else{
+
+
+				var div = document.createElement('div');
+
+				var newimg = document.createElement('img');
+
+				newimg.src = addimage;
+				newimg.alt = addalt;
+
+				div.appendChild(newimg);
+
+				document.querySelector('#thumbnails').appendChild(div);
+
+				div.classList.add('col-4','col-md-3','col-lg-2','mt-2','mt-md-3','thumbnail');
+				newimg.classList.add('img-fluid','picker')
+
+			}
+
+			var x = document.querySelectorAll(".picker")
+
+			console.log(x)
+
+
+
+		var x = document.querySelectorAll(".picker")
+		var displayedImage = document.querySelector('#mainmain')
+
+		for (let i=0; i < x.length; i++) {
+			
+			x[i].addEventListener('click',function myFunction(){
+
+				displayedImage.src = x[i].src
+
+			});
+
+
+		}
+
+
+	     	return false
+
+		}
+
+		document.querySelector('#delete-all').onclick = function(){
+
+
+		var parentNode = document.querySelector('#thumbnails');
+
+		parentNode.innerHTML = ''
+			
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

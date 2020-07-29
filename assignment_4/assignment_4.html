@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liar's Dice</title>
+
+	<style>
+		
+		#entire{
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.dice{
+			width: 100px;
+			margin: 10px;
+		}
+
+		#one{
+			margin-left: 0;
+		}
+
+		#five{
+			margin-right: 0;
+		}
+
+		.hidden{
+			display: none;
+		}
+
+		.results{
+			margin-bottom: 10px;
+			font-size: 20px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="entire">
+		
+		<div class="header">
+
+			<h2>Liar's Dice</h2>
+
+		</div>
+
+		<div class="input">
+			<form action="confirmation.html">
+			<label for="liar">Your Guess:</label>
+			<input type="text" name="liar" id="liar">
+			<button type="button" onclick="clicker()">Submit</button>
+			</form>
+		</div>
+
+			<h3>Results:</h3>
+
+		<div class="results">
+
+			<span id="showresults"> </span>
+
+		</div>
+
+			<img src="dice_images/1.png" alt="dice1" class="dice" id="one">
+			<img src="dice_images/1.png" alt="dice1" class="dice" id="two">
+			<img src="dice_images/1.png" alt="dice1" class="dice" id="three">
+			<img src="dice_images/1.png" alt="dice1" class="dice" id="four">
+			<img src="dice_images/1.png" alt="dice1" class="dice" id="five">
+
+
+			
+			<img src="dice_images/1.png" alt="dice1" class="hidden">
+			<img src="dice_images/2.png" alt="dice1" class="hidden">
+			<img src="dice_images/3.png" alt="dice1" class="hidden">
+			<img src="dice_images/4.png" alt="dice1" class="hidden">
+			<img src="dice_images/5.png" alt="dice1" class="hidden">
+			<img src="dice_images/6.png" alt="dice1" class="hidden">
+
+
+
+	</div>
+
+
+<script>
+
+	function clicker(){
+	
+	
+	const numbers = []
+	const images = document.querySelectorAll(".dice")
+	let inputed = document.querySelector("#liar").value
+	inputed = parseInt(inputed)
+		
+
+	for (let i = 0; i < 5; i++) {
+		
+	numbers.push(Math.floor( Math.random() * 6 + 1))
+
+	
+	
+	images[i].src = images[i].src.replace("1.png" || "2.png" || "3.png" || "4.png" || "5.png" || "6.png", numbers[i] + ".png")
+
+	console.log(images[i].src)
+
+
+if (inputed == numbers[0] || inputed == numbers[1] || inputed == numbers[2] || inputed == numbers[3] || inputed == numbers[4]) {
+
+	document.querySelector("#showresults").innerText = "You guessed it!"
+
+} else {
+
+	document.querySelector("#showresults").innerText = "Try again"
+}
+	 	
+
+}}
+
+
+
+
+
+	
+	 	/*if (numbers[i].Contains(liar)) {
+
+		youraward.replace("","You guessed it!")
+
+		}
+
+		else {
+
+		youraward.replace("","Try again")
+		} */
+
+
+
+
+	/*const images = document.querySelectorAll(".dice")
+	let first = document.querySelector("#one").src
+	let second = document.querySelector("#two").src
+	let third = document.querySelector("#three").src
+	let fourth = document.querySelector("#four").src
+	let fifth = document.querySelector("#five").src*/
+
+
+
+
+
+
+
+/*let newfirst = first.replace("/1","/"+numbers[0])
+document.querySelector("#one").src = newfirst
+
+let newsecond = second.replace("/1","/"+numbers[1])
+document.querySelector("#two").src = newsecond
+
+let newthird = third.replace("/1","/"+numbers[2])
+document.querySelector("#three").src = newthird
+
+let newfourth = fourth.replace("/1","/"+numbers[3])
+document.querySelector("#four").src = newfourth
+
+let newfifth = fifth.replace("/1","/"+numbers[4])
+document.querySelector("#five").src = newfifth*/
+
+	
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
