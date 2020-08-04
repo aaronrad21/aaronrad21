@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<title>Dashboard with Storage</title>
+
+</head>
+
+<body class="bg-light">
+
+	<div class="container">
+		<div class="pt-5 pb-3 text-center">
+			<h2>Dashboard</h2>
+			<p id="msg" class="text-success"></p>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="mb-3">User Information</h4>
+				<form id="user-form">
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="firstName">First name</label>
+							<input type="text" class="form-control" id="firstName">
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="lastName">Last name</label>
+							<input type="text" class="form-control" id="lastName">
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="instagram">Instagram</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+							<input type="text" class="form-control" id="instagram">
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="twitter">Twitter</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+							<input type="text" class="form-control" id="twitter">
+						</div>
+					</div>
+
+					<button class="btn btn-primary btn-lg btn-block mt-4" type="submit">Save</button>
+					<button id="clear-btn" class="btn btn-secondary btn-lg btn-block mt-4" type="button">Clear</button>
+				</form>
+			</div>
+		</div>
+
+		<footer class="my-5 text-muted text-center text-small">
+			<p class="mb-1">&copy; 2019 ITP Web Dev</p>
+		</footer>
+	</div>
+
+
+	<script>
+
+	if (localStorage.fname == undefined) {
+		console.log("first name is undefined")
+	}
+	else{
+	document.querySelector('#firstName').value = localStorage.fname
+	}
+
+
+	if(localStorage.lname == undefined){
+		console.log("last name is undefined")
+	}
+	else{
+	document.querySelector('#lastName').value = localStorage.lname
+	}
+
+
+	if (localStorage.socials == undefined) {
+
+		console.log("no socials set")
+	} 
+
+	else{
+
+		console.log(localStorage.socials)
+
+		var newsocials = localStorage.socials.replace(/instagram: /, "").replace("twitter: ", "")
+
+		var object_socials = JSON.parse(newsocials)
+		console.log(object_socials)
+
+		document.querySelector('#instagram').value = object_socials[0]
+		document.querySelector('#twitter').value = object_socials[1]
+	}
+	
+
+	document.querySelector('#user-form').onsubmit = function(){
+
+	
+		var fname = document.querySelector('#firstName').value.trim()
+		var lname = document.querySelector('#lastName').value.trim()
+		var insta = document.querySelector('#instagram').value.trim()
+		var twitter = document.querySelector('#twitter').value.trim()
+		var socials = []
+
+
+		if (fname.length == 0) {
+			document.querySelector('#firstName').classList.add('is-invalid')
+		}
+		else{
+			document.querySelector('#firstName').classList.remove('is-invalid')
+		}
+
+		if (lname.length == 0) {
+			document.querySelector('#lastName').classList.add('is-invalid')
+		}
+		else{
+			document.querySelector('#lastName').classList.remove('is-invalid')
+		}
+
+		if (fname.length > 0 && lname.length > 0) {
+
+			document.querySelector('#firstName').value = ""
+			document.querySelector('#lastName').value = ""
+			document.querySelector('#instagram').value = ""
+			document.querySelector('#twitter').value = ""
+
+			localStorage.fname = fname;
+			localStorage.lname = lname;
+
+			console.log(localStorage.fname)
+			console.log(localStorage.lname)
+
+			if( insta.length > 0 || twitter.length > 0 ){
+
+			socials.push("instagram: " + insta)
+			socials.push("twitter: " + twitter)
+		
+
+			var socialstring = JSON.stringify(socials)
+
+			console.log(socialstring)
+
+			localStorage.socials = socialstring
+
+		}
+
+			console.log(localStorage)
+
+			document.querySelector('#msg').innerText = "User Information Saved"
+
+		}
+	
+
+		return false;
+	}
+
+
+	document.querySelector('#clear-btn').onclick = function(){
+
+		localStorage.clear();
+			document.querySelector('#firstName').value = ""
+			document.querySelector('#lastName').value = ""
+			document.querySelector('#instagram').value = ""
+			document.querySelector('#twitter').value = ""
+
+
+	}
+
+
+	</script>
+
+
+</body>
+</html>
