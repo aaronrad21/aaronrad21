@@ -1,8 +1,6 @@
-<span id="a">Hi</span>!<span id="b"></span><span id="c"></span> I'm Aaron Rad<!-- kjsdfhkjdhsfkjdshfkj -->
+
+<span id="a">Hi!</span><span id="b"></span><span id="c"></span>I'm Aaron Rad<!-- kjsdfhkjdhsfkjdshfkj -->
 <br>
-<span id="a">Aaron Rad</span>
-<br/>
-<br/>
 
  <!-- sjkfhskjf -->
 
