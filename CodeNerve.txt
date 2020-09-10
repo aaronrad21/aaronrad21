@@ -1,11 +1,11 @@
 
-<p> <span id="a">Hi! </span>I'm Aaron Rad </p>
+<span id="a">Hi! </span> I'm Aaron Rad
 
 <p><span id="red">University of Southern California</span></p>
 
 <p>Major: Business Administration</p>
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
-<p>Minor: Web Technologies and Applications</p>
+Minor: Web Technologies and Applications
 
 <p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
