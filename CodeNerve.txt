@@ -9,10 +9,10 @@
 
 <p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
-<p>Check out my vegan dessert company: <a href="sweetzendesserts.com"> Sweet Zen Desserts</a>.</p>
+<p>Check out my vegan dessert company: <a href="sweetzendesserts.com"> Sweet Zen Desserts</a></p>
 
 <p> Portfolio: 
-<br> <a href="student_page.html">Web Development</a> 
+<br> <a href="Student_page.html">Web Development</a> 
 <br> <a href="link2">Data Analytics</a>
 <br> <a href="link3">Digital Marketing</a>
 <br> <a href="link3">UI/UX</a>
