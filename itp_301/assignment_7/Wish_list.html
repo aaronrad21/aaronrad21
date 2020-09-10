@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wish list</title>
+
+
+	<style>
+		
+		.required{
+			color: red;
+		}
+
+		#entire{
+			width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 50px;
+			padding-top: 0;
+		}
+
+		.left{
+			text-align: right;
+			width: 100px;
+			margin-right: 30px;
+			float: left;
+			line-height: 30px;
+		}
+
+		.rows{
+			
+			margin-top: 30px;
+
+		}
+
+		.boxxy{
+			border-radius: 3px;
+			border: solid grey .5px;
+			height: 30px;
+			width: 300px;
+			padding-left: 10px;
+		}
+
+		.right{
+			margin-left: 130px;
+			font-style: italic;
+		}
+
+		#buttons{
+			margin-top: 40px;
+			margin-left: 130px;
+		}
+
+		.bigger{
+			padding: 10px;
+			border-radius: 3px;
+			width: 80px;
+			border: none;
+		}
+
+		#adding{
+			background-color: lightblue;
+			color: white
+		}
+
+		.delete{
+			border: red solid 1px;
+			border-radius: 3px;
+			width: 80px;
+			padding: 8px;
+			text-align: center;
+			font-size: 15px;
+			color: red;
+
+		}
+
+		#auto{
+			margin-top: 15px;
+			width: 500px;
+		}
+
+		.clearfloat{
+			display: block;
+			float: none;
+			clear: both;
+		}
+
+		.float{
+			float: left;
+			width: 100px;
+			height: 30px;
+
+		}
+
+		.float-img{
+			margin-left: 60px;
+
+		}
+
+		.float-item{
+
+			margin-left: 50px;
+		
+			width: 100px;
+
+		}
+
+		.img-size{
+			width: 160px;
+			height: 160px;
+			margin: 20px;
+			margin-left: 0; 
+		}
+
+
+		.divheight{
+			float: left;
+			text-align: center;
+			margin-top: 80px;
+			width: 100px;
+		}
+
+		.rowing{
+			clear: both;
+			width: 500px;
+		}
+
+		.todo-remove{
+			width: 60px;
+		}
+
+
+
+	</style>
+		
+
+</head>
+<body>
+
+	<div id="entire">
+		
+		<h1>Wish List Manager</h1>
+
+	<form id="wishlist">
+
+		<div class="rows">
+			
+			<label for="item" class="left"> Item: <span class="required">*</span></label>
+			<input type="text" name="item" id="item" placeholder="Item Name..." class="boxxy">
+			
+
+		</div>
+
+		<span class="required right" id="item-error"></span>
+
+
+
+
+		<div class="rows">
+			
+			<label for="price" class="left"> Price ($): <span class="required">*</span></label>
+			<input type="number" name="price" id="price" placeholder="$..." class="boxxy">
+
+		</div>
+
+		<span class="required right" id="price-error"></span>
+
+
+
+
+		<div class="rows">
+			
+			<label for="image" class="left"> Image URL: </label>
+			<input type="text" name="image" id="image" placeholder="https//..." class="boxxy">
+		
+
+		</div>
+
+		<br>
+		<br>
+
+		<span class="required right"> * Required</span>
+
+
+		<div id="buttons">
+		<button type="submit" class="bigger" id="adding"> Add</button>
+		<button type="reset" class="bigger"> Reset</button>
+		</div>
+
+	</form>
+
+	<hr>
+
+	<h1>Wish List</h1>
+
+	<div class="delete" id="deleteall">Delete All</div>
+
+	<hr>
+
+	<div id="auto">
+	<div class="float float-img"><strong>Image</strong></div>
+	<div class="float float-item"><strong>Item</strong></div>
+	<div class="float float-price"><strong>Price</strong></div>
+	</div>
+
+
+
+	<div class="clearfloat"></div>
+
+	<hr>
+
+	
+
+	<div id="items">
+
+	</div>
+
+
+
+
+	</div>
+
+	<script>
+		
+		document.querySelector('#wishlist').onsubmit = function(){
+
+			var item = document.querySelector('#item').value.trim()
+			var price = document.querySelector('#price').value.trim()
+			var image = document.querySelector('#image').value.trim()
+
+			if (/^$/.test(image) == true){
+
+				image = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png"
+
+			}
+
+			if (/^$/.test(item) == true || /^$/.test(price) == true) {
+
+				document.querySelector('#item-error').innerText = "Must include item name"
+				document.querySelector('#price-error').innerText = "Must include price of item"
+
+			}
+
+
+			else{
+
+				var itemlist = document.querySelector('#items')
+				
+				var div = document.createElement('div');
+				var itemdiv = document.createElement('div');
+				var pricediv = document.createElement('div');
+				var imagediv = document.createElement('img');
+				var removeit = document.createElement('span')
+
+				imagediv.src = image
+				itemdiv.innerText = item
+				pricediv.innerText = "$" + price
+				removeit.innerText = "Remove"
+
+				div.appendChild(imagediv)
+				div.appendChild(itemdiv)
+				div.appendChild(pricediv)
+				div.appendChild(removeit)
+
+				itemlist.appendChild(div)
+
+
+				imagediv.classList.add('float','img-size')
+				itemdiv.classList.add('divheight')
+				pricediv.classList.add('divheight')
+				div.classList.add('rowing')
+				removeit.classList.add('delete','divheight','todo-remove')
+
+			var removebuttons = document.querySelectorAll('.todo-remove');
+			console.log(removebuttons)
+
+			for (let i=0; i < removebuttons.length; i++) {
+
+				console.log(removebuttons)
+				
+				removebuttons[i].onclick = function(){
+
+					console.log('hi')
+					
+					this.parentNode.remove();
+
+				}
+
+
+			}
+
+
+
+
+			}
+
+			return false;
+
+		}
+
+
+		document.querySelector('#deleteall').onclick = function(){
+
+				document.querySelector('#items').innerHTML = ""
+
+			}
+
+	
+
+
+
+
+
+	</script>
+
+</body>
+</html>

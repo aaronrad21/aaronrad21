@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Shopping Cart w budget | Aaron Rad </title>
+
+
+	<style>
+		
+		#header{
+			background-color: #912C2C;
+			color: white;
+			font-size: 32px;
+			height: 100px;
+			line-height: 100px;
+		}
+
+
+		#middle{
+			width: 570px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 50px;
+
+		}
+
+		#footer{
+			background-color: lightgrey;
+			height: 30px;
+			font-size: 12px;
+			line-height: 30px;
+			margin-top: 50px;
+		}
+
+
+		#entire{
+			text-align: center;
+		}
+
+
+		.items{
+			margin: 10px;
+			padding: 10px;
+			width: 150px;
+			height: 180px;
+			float: left;
+			font-size: 14px;
+		}
+
+		.items:hover{
+			opacity: .5;
+		}
+
+		.clearfloat{
+			clear: both;
+		}
+
+
+		.suff_id{
+			width: 140px;
+			height: 140px;
+			margin-bottom: 5px;
+		}
+
+		.items span{
+			margin-top: 10px;
+		}
+
+
+		#bottomsection{
+			text-align: right;
+			margin-top: 50px;
+			font-weight: bold;
+		}
+
+		.bottomfloat{
+			float: left;
+		}
+
+		#subtotal{
+			margin-left: 220px;
+		}
+
+		#moneyinput{
+			float: left;
+			margin-top: 10px;
+		}
+
+		#moneyinput input {
+			height: 20px;
+			margin: 0;
+			border-radius: 5px;
+			border: 1px lightgrey solid;
+			padding: 5px;
+		}
+
+		#moola-btn {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin: 0;
+			font-weight: bold;
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div id="entire">
+		
+		<div id="header"> My Cart </div>
+
+
+		<div id="middle"> 
+
+
+			<div class="items" id="item_1" > 
+
+				<img src="img/suff_id.JPG" alt="suff_id" class="suff_id" >
+
+				Suffering ID single
+
+				<br>
+
+				<span id="firstitem">$1.29</soan>
+
+			 </div>
+
+			<div class="items" id="item_2" > 
+
+				<img src="img/galaxy.JPG" alt="galaxy" class="suff_id">
+
+				Children of the Universe
+
+				<br>
+
+				<span id="seconditem"> $5.00 </span>
+
+			 </div>
+
+			<div class="items" id="item_3">
+				
+				<img src="img/ticket.JPG" alt="ticket" class="suff_id">
+
+				Concert Ticket
+
+				<br>
+
+				<span id="thirditem">$50</span>
+
+			</div>
+
+
+			<div class="clearfloat"></div>
+
+
+			<div id="bottomsection">
+
+			<div id="remaining" class="bottomfloat">
+				
+				Remaining Funds: $<span id="funds">0</span>
+
+			</div>
+
+			<div id="subtotal" class="bottomfloat">
+
+				Cart Subtotal: $<span id="total">0</span>
+				
+			</div>
+
+			</div>
+
+			<div class="clearfloat"></div>
+
+			<div id="moneyinput">
+				
+			<input type="text" name="moola" id="moola" placeholder="$">
+			<button id="moola-btn" type="button">Add Money</button>
+
+			</div>
+
+
+		 </div>
+
+		 <div class="clearfloat"></div>
+
+
+		<div id="footer"> &copy 2020 Aaron Rad  </div>
+
+
+	</div>
+
+
+	<script>	
+
+
+		document.querySelector('#moola-btn').onclick = function(){
+
+			var moolainput = document.querySelector('#moola').value;
+			moolainput = parseInt(moolainput)
+			console.log(moolainput)
+
+			var startingamount = document.querySelector('#funds').innerText;
+			startingamount = parseInt(startingamount)
+			console.log(startingamount)
+
+			var totalamount = moolainput + startingamount;
+			document.querySelector('#funds').innerText = totalamount
+
+		}
+		
+
+
+
+		document.querySelector('#item_1').onclick = function(){
+
+			var firstitemvalue = document.getElementById('firstitem').innerText.replace('$', '');
+			firstitemvalue = parseFloat(firstitemvalue);
+
+			
+			var totalfunds = document.querySelector('#funds').innerText
+			totalfunds = parseInt(totalfunds)
+			console.log(totalfunds);
+
+			var remainingfunds = totalfunds - firstitemvalue
+			console.log(remainingfunds)
+
+			if (remainingfunds > 0) {
+
+				document.querySelector('#funds').innerText = remainingfunds
+				var startingamount = document.querySelector('#total').innerText;
+				startingamount = parseFloat(startingamount);
+				var totalamount = startingamount + firstitemvalue;
+				totalamount = parseFloat(totalamount).toFixed(2);
+				document.querySelector('#total').innerText = totalamount
+
+			} else {
+
+				alert('insufficient funds')
+			}
+
+
+			var startingamount = document.querySelector('#total').innerText;
+			startingamount = parseFloat(startingamount);
+			var totalamount = startingamount + firstitemvalue;
+			totalamount = parseFloat(totalamount).toFixed(2);
+			document.querySelector('#total').innerText = totalamount
+
+		}
+
+		document.querySelector('#item_2').onclick = function(){
+			var seconditemvalue = document.getElementById('seconditem').innerText.replace('$', '');
+			seconditemvalue = parseFloat(seconditemvalue);
+
+			var totalfunds = document.querySelector('#funds').innerText
+			totalfunds = parseInt(totalfunds)
+			console.log(totalfunds);
+
+			var remainingfunds = totalfunds - seconditemvalue
+			console.log(remainingfunds)
+
+			if (remainingfunds > 0) {
+
+				document.querySelector('#funds').innerText = remainingfunds
+				var startingamount = document.querySelector('#total').innerText;
+				startingamount = parseFloat(startingamount);
+				var totalamount = startingamount + seconditemvalue;
+				totalamount = parseFloat(totalamount).toFixed(2);
+				document.querySelector('#total').innerText = totalamount
+
+			} else {
+
+				alert('insufficient funds')
+			}
+
+
+		}
+
+
+		document.querySelector('#item_3').onclick = function(){
+			var thirditemvalue = document.getElementById('thirditem').innerText.replace('$','');
+			thirditemvalue = parseFloat(thirditemvalue);
+
+			var totalfunds = document.querySelector('#funds').innerText
+			totalfunds = parseInt(totalfunds)
+			console.log(totalfunds);
+
+			var remainingfunds = totalfunds - thirditemvalue
+			console.log(remainingfunds)
+
+			if (remainingfunds > 0) {
+				document.querySelector('#funds').innerText = remainingfunds
+				var startingamount = document.querySelector('#total').innerText;
+				startingamount = parseFloat(startingamount);
+				var totalamount = startingamount + thirditemvalue;
+				totalamount = parseFloat(totalamount).toFixed(2);
+				document.querySelector('#total').innerText = totalamount
+			} 
+			else {
+
+				alert('insufficient funds')
+			}
+
+			
+
+		}
+
+
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>

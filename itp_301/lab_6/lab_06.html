@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Password Validator</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+	<style>
+		.rules {
+			background-color: #FF0;
+			margin:	10px 0px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">Password Validator</h1>
+		</div> <!-- .row -->
+
+		<div class="row mt-5">
+			<div class="col-12 col-sm-5">
+				<h3 class="mb-4">Password:</h3>
+				<input type="text" name="" id="pass-input" class="form-control">
+			</div>
+
+			<div class="col-12 col-sm-7">
+				<h3 class="mb-4">Validation Rules:</h3>
+				<div class="rules" id="rule1">1: Cannot be empty/blank.</div>
+				<div class="rules" id="rule2">2: Must contain at least 5 characters.</div>
+				<div class="rules" id="rule3">3: Must have at least one special character @ or #.</div>
+				<div class="rules" id="rule4">4: Must contain upper AND lower case characters.</div>
+				<div class="rules" id="rule5">5: Cannot contain word 'pass' (case insensitive).</div>
+			</div>
+		</div> <!-- .row -->
+	</div> <!-- .container-fluid -->
+
+	<script>
+		
+		document.querySelector('#pass-input').oninput = function(){
+
+			var inputted = document.querySelector('#pass-input').value
+			var rule1 = document.querySelector('#rule1')
+			var rule2 = document.querySelector('#rule2')
+			var rule3 = document.querySelector('#rule3')
+			var rule4 = document.querySelector('#rule4')
+			var rule5 = document.querySelector('#rule5')
+
+
+			if (/^$/.test(inputted) == true ) {
+
+				rule1.style.backgroundColor = '#E00'
+			}
+
+			else { 
+
+				rule1.style.backgroundColor = '#0B0'
+			}
+
+			console.log(/^\s+/.test(inputted))
+
+			if (/\S{5,}/.test(inputted) == true && /^\s/.test(inputted) == false) {
+
+				rule2.style.backgroundColor = '#0B0'
+			}
+
+			else { 
+
+				rule2.style.backgroundColor = '#E00'
+			}
+
+			if (/[@]|[#]/.test(inputted) == false) {
+
+				rule3.style.backgroundColor = '#E00'
+			}
+
+			else { 
+
+				rule3.style.backgroundColor = '#0B0'
+			}
+
+			if (/[a-z]/g.test(inputted) == true && /[A-Z]/g.test(inputted) == true) {
+
+				rule4.style.backgroundColor = '#0B0'
+			}
+
+			else { 
+
+				rule4.style.backgroundColor = '#E00'
+			}
+
+			if (/(?=pass)/gi.test(inputted) == false) {
+
+				rule5.style.backgroundColor = '#0B0'
+			}
+
+			else { 
+
+				rule5.style.backgroundColor = '#E00'
+			}
+
+
+
+		}
+
+
+
+
+	</script>
+
+</body>
+</html>

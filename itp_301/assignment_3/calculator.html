@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" name="display" class="col-12 text-right form-control" value="0" disabled="true" placeholder="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-9 btn btn-lg btn-outline-dark" id="del" value="del" onclick="numbers('del')">AC</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="divide" value="/" onclick="numbers('/')">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(7)" id="7" value="7">7</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(8)" id="8" value="8">8</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(9)" id="9" value="9">9</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="multiply" value="*" onclick="numbers('*')">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(4)" id="4" value="4">4</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(5)" id="5" value="5">5</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(6)" id="6" value="6">6</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="substrct" value="-" onclick="numbers('-')">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(1)" id="1" value="1">1</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(2)" id="2" value="2">2</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" onclick="numbers(3)" id="3" value="3">3</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="add" value="+" onclick="numbers('+')">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-6 btn btn-lg btn-outline-dark" onclick="numbers(0)" id="b0" value="0">0</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="dot" value="." onclick="numbers('.')">.</button>
+					<button class="col-3 btn btn-lg btn-outline-dark" id="equal" value="=" onclick="numbers('=')">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+
+
+
+
+
+function numbers(value){
+
+var displayvalue = document.querySelector('#display').value
+console.log(document.querySelector('#display').value)
+
+var calculator = document.querySelector('#calculator')
+/*var calculatorbuttons = document.querySelector('#calculator').querySelectorAll('button').value
+console.log(calculatorbuttons)*/
+
+const previousKeyType = calculator.dataset.previousKeyType
+
+
+if (
+  value === 1 ||
+  value === 2 ||
+  value === 3 ||
+  value === 4 ||
+  value === 5 ||
+  value === 6 ||
+  value === 7 ||
+  value === 8 ||
+  value === 9 ||
+  value === 0
+
+  ) { if (displayvalue === '0' || previousKeyType === 'operator') {
+
+document.querySelector('#display').value = parseInt(value)
+
+} else {
+  document.querySelector('#display').value = displayvalue + parseInt(value)
+}
+
+  console.log('numberkey')
+}
+
+
+if (
+
+      value === '+' ||
+      value === '-' || 
+      value === '*' ||
+      value === '/'
+
+
+  ) {
+
+  calculator.dataset.previousKeyType = 'operator'
+
+  console.log('operator key')
+
+}
+
+
+if (value === '.') {
+
+  document.querySelector('#display').value = displayvalue + '.'
+
+console.log('decimal key!')
+
+}
+
+ if (value === 'del') {
+    console.log('clear key')
+  }
+
+
+if (value === '=') {
+    console.log('equals')
+  }
+
+}
+
+
+
+
+	</script>
+
+</body>
+</html>

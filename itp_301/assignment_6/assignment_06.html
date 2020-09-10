@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form Validation</title>
+	<style>
+		.left{
+			float: left;
+			width: 200px;
+			text-align: right;
+			padding-right: 20px;
+		}
+		.form-row{
+			padding-bottom: 20px;
+		}
+		.end{
+			padding-bottom: 20px;
+			margin-left: 220px;
+		}
+
+		h1{
+			margin-left: 220px;
+			padding-bottom: 20px;
+		}
+		.green{
+			color: purple;
+			width: 300px;
+		}
+		.button{
+			padding: 10px;
+			border-radius: 3px;
+			border: none;
+			font-weight: bold;
+		}
+	
+	
+		#entire{
+			background-color: white;
+			width: 700px;
+			margin: auto;
+			padding-top: 10px;
+			margin-top: 50px;
+		}
+
+		.required
+		{
+   			 color: red;
+   			 margin-left: 220px;
+		}
+
+		#total{
+			font-size: 10px;
+			margin-left: 550px;
+		}
+
+
+		input, textarea{
+			border-radius: 2px;
+			border: 1px grey solid;
+			padding: 5px;
+		}
+
+		textarea{
+			width: 350px;
+			height: 100px;
+		}
+
+
+		#submit{
+			background-color: lightblue;
+			color: white;
+		}
+
+		.bottom-rows{
+			padding-bottom: 30px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="entire">
+
+<form id="order">
+
+	<h1> Registration Form </h1>
+
+	<div class="form-row">
+		<label for="firstname" class="left"> First Name:</label>
+			<input type="text" name="firstname" placeholder="First Name" class="green" id="firstname">
+			<div id="firstname-error" class="required"></div>
+	</div>
+
+
+	<div class="form-row">
+		<label for="lastname" class="left"> Last Name:</label>
+			<input type="text" name="lastname" placeholder="Last Name" class="green" id="lastname">
+			<div id="lastname-error" class="required"></div>
+	</div>
+
+
+	<div class="form-row">
+		<label for="email" class="left"> Email:</label>
+			<input type="text" name="email" placeholder="johndoe@gmail.com" class="green" id="email">
+			<div id="email-error" class="required"></div>
+		
+	</div>
+
+	<div class="form-row">
+		<label for="phonenum" class="left"> Phone:</label>
+			<input type="text" name="phonenum" placeholder="(xxx)xxx-xxxx" class="green" id="phonenum">
+			<div id="phone-error" class="required"></div>
+	</div>
+
+
+	<div class="form-row">
+		<label for="website" class="left"> Website:</label>
+			<input type="text" name="website" placeholder="https://johndoe.com" class="green" id="website">
+			<div id="website-error" class="required"></div>
+		
+	</div>
+
+	<div class="form-row">
+		<label for="password" class="left"> Password:</label>
+			<input type="text" name="password" class="green" id="password">
+			<div id="password-error" class="required"></div>
+		
+	</div>
+
+
+	<div class="end">
+	<button type="submit" class="button" id="submit"> Submit </button>
+	<button type="reset" class="button"> Reset </button>
+	</div>
+
+</form>
+
+	<hr>
+
+	<div id="output">
+		
+		<h1>Data Output</h1>
+
+	<div class="bottom-rows">
+		<span class="left">Full Name:</span>
+		<span class="green" id="nameoutput"></span>
+	</div>
+
+	<div class="bottom-rows">
+		<span class="left">Email Prefix:</span>
+		<span class="green" id="emailoutput"></span>
+	</div>
+
+	<div class="bottom-rows">
+		<span class="left">Formatted Phone Number:</span>
+		<span class="green" id="phoneoutput"></span>
+	</div>
+
+
+	</div>
+
+
+</div>
+
+
+
+<script>
+
+
+document.querySelector('#order').onsubmit = function(){
+
+	var firstname = document.querySelector('#firstname').value.trim()
+
+
+	if (/^$/.test(firstname) == true){
+
+		document.querySelector("#firstname-error").innerHTML = "First Name cannot be empty."
+
+	}
+
+
+	else if (/^[a-z]/.test(firstname) == true) {
+
+		document.querySelector("#firstname-error").innerHTML = "Invalid First Name"
+
+	}
+
+	else if (/\d/g.test(firstname) == true){
+
+		document.querySelector("#firstname-error").innerHTML = "Invalid First Name"
+
+	}
+
+	else if (/[A-Z]{2,}/.test(firstname) == true) {
+
+		document.querySelector("#firstname-error").innerHTML = "Invalid First Name"
+	}
+
+
+	else {
+
+		document.querySelector("#firstname-error").innerHTML = ""
+
+	}
+
+
+	var lastname = document.querySelector('#lastname').value.trim()
+
+
+	if (/^$/.test(lastname) == true) {
+
+		document.querySelector("#lastname-error").innerHTML = "Last Name cannot be empty."
+
+	}
+
+	else if (/^[a-z]/.test(lastname) == true || /\d/g.test(lastname) == true || /[A-Z]{2,}/.test(lastname) == true) {
+
+		document.querySelector("#lastname-error").innerHTML = "Invalid Last Name"
+	}
+
+	else {
+		document.querySelector("#lastname-error").innerHTML = ""
+	}
+	
+
+ var email = document.querySelector('#email').value.trim()
+
+ 	if (/^$/.test(email) == true) {
+
+		document.querySelector("#email-error").innerHTML = "Email cannot be empty."
+
+ 	}
+
+ 	else if ( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false ) {
+
+		document.querySelector('#email-error').innerHTML = "Invalid email.";
+
+			}
+
+	else {
+
+		document.querySelector('#email-error').innerHTML = "";
+	}
+
+
+
+	var phone = document.querySelector('#phonenum').value.trim()
+
+	if (/^$/.test(phone) == true) {
+
+		document.querySelector('#phone-error').innerHTML = "Phone cannot be empty"
+
+	}
+
+	else if(/^(\d{3}\-\d{3}\-\d{4}|\d{3}\s\d{3}\s\d{4})/.test(phone) == false) {
+
+		document.querySelector('#phone-error').innerHTML = "Invalid phone format"
+
+	}
+
+	else {
+
+		document.querySelector('#phone-error').innerHTML = ""
+	}
+
+
+	var website = document.querySelector('#website').value.trim()
+
+	if (/^$/.test(website) == true) {
+
+		document.querySelector('#website-error').innerHTML = "Website cannot be empty."
+	}
+
+	else if (/^[http://]{7}/.test(website) == true) {
+
+		document.querySelector('#website-error').innerHTML = ""
+	}
+
+	else if (/^[https://]{8}/.test(website) == true) {
+
+		document.querySelector('#website-error').innerHTML = ""
+	}
+
+	else{
+
+		document.querySelector('#website-error').innerHTML = "Must start with http:// or https://"
+	}
+
+
+
+	var password = document.querySelector('#password').value.trim()
+
+	if (/^$/.test(password) == true) {
+
+		document.querySelector('#password-error').innerHTML = "Password cannot be empty"
+
+	} 
+
+	else if (/[a-z]/g.test(password) == true && /[A-Z]/g.test(password) == true && /\d/g.test(password) == true  && /\W/g.test(password) == true) {
+
+		document.querySelector('#password-error').innerHTML = ""
+
+	}
+
+
+	else {
+
+		document.querySelector('#password-error').innerHTML = "Insecure password"
+
+	}
+
+
+	var firstnamecheck = document.querySelector('#firstname-error').innerHTML
+	var lastnamecheck = document.querySelector('#lastname-error').innerHTML
+	var emailcheck = document.querySelector('#email-error').innerHTML
+	var outputemail = email.substr(0,email.indexOf("@"))
+	var numbercheck = document.querySelector('#phone-error').innerHTML
+	var replacing = new RegExp(' ', 'g')
+	var newnumber = phone.replace(replacing,"-")
+	var websitecheck = document.querySelector('#website-error').innerHTML
+	var passwordcheck = document.querySelector('#password-error').innerHTML
+
+	if (/^$/.test(firstnamecheck) == true && /^$/.test(lastnamecheck) == true && /^$/.test(emailcheck) == true && /^$/.test(numbercheck) == true && /^$/.test(websitecheck) == true && /^$/.test(passwordcheck) == true) {
+
+		document.querySelector('#nameoutput').innerHTML = firstname + " " + lastname;
+		document.querySelector('#emailoutput').innerHTML = outputemail;
+		document.querySelector('#phoneoutput').innerHTML = newnumber
+	}
+
+	else{
+
+		document.querySelector('#nameoutput').innerHTML = ""
+		document.querySelector('#emailoutput').innerHTML = ""
+		document.querySelector('#phoneoutput').innerHTML = ""
+	}
+
+	
+
+
+
+
+	return false;
+
+}
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
