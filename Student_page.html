@@ -6,25 +6,30 @@
 
 	<style>
 
+		@font-face{
+			font-family: terminal;
+			src: url(Inconsolata.TTF);
+		}
+
+		body{
+			background-color: black;
+		}
+
 		#entire{
 			width: 800px;
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
-		}
-		
-		.fav_color{
-			width: 150px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			text-align: center;
-			border-radius: 10px;
-			background-color: lightgrey;
-			margin-left: auto;
-			margin-right: auto;
-			font-weight: bold;
+			color: white;
+			font-family: terminal;
 		}
 
+		a{
+			text-decoration: none;
+			color: white;
+			font-family: terminal;
+
+		}
 
 		.box{
 			width: 350px;
@@ -35,7 +40,7 @@
 		}
 
 		.stuff{
-			margin-top: 50px;
+			margin-top: 70px;
 		}
 
 		ul{
@@ -44,12 +49,16 @@
 			margin: 0;
 		}
 
+		.clearfloat{
+			clear: both;
+		}
 
-
+		@media
 
 	</style>
 
 <body>
+	
 	<div id="entire">
 
 		<div class="personal">
@@ -57,31 +66,29 @@
 			<h1> Aaron Rad</h1>
 			<p><a href="mailto:aaronrad21@gmail.com">aaronrad@usc.edu</a></p>
 
-			<div class="fav_color" id="color">
-				Favorite Color
-			</div>
-
 
 		</div>
 		
 
 		<div class="stuff">
+
+			<h2> Front-End Web Development</h2>
 			
 
 			<div id="assignments" class="box">
 
-				<h2>Assignments</h2>
+				<h3>Assignments</h3>
 
 				<hr>
 				
 				<ul>
-				<li><a href="assignment_1/assignment_1_photogallery.html">Assignment 1: Photo Gallery</a></li>
-				<li><a href="assignment_2/shopping_cart.html">Assignment 2: Shopping Cart</a></li>
-				<li><a href="assignment_3/calculator_attempt_one.html">Assignment 3: Calculator</a></li>
-				<li><a href="assignment_4/assignment_4.html">Assignment 4: Liar's Dice</a></li>
-				<li><a href="assignment_5/assignment_5.html">Assignment 5: Contact Form</a></li>
-				<li><a href="assignment_6/assignment_06.html">Assignment 6: Registration Form</a></li>
-				<li><a href="assignment_7/Wish_list.html">Assignment 7: Wish List</a></li>
+				
+				<li><a href="itp_301/assignment_2/shopping_cart.html">Assignment 1: Shopping Cart</a></li>
+				<li><a href="itp_301/assignment_3/calculator_attempt_one.html">Assignment 2: Calculator</a></li>
+				<li><a href="itp_301/assignment_4/assignment_4.html">Assignment 3: Liar's Dice</a></li>
+				<li><a href="itp_301/assignment_5/assignment_5.html">Assignment 4: Contact Form</a></li>
+				<li><a href="itp_301/assignment_6/assignment_06.html">Assignment 5: Registration Form</a></li>
+				<li><a href="itp_301/assignment_7/Wish_list.html">Assignment 6: Wish List</a></li>
 				
 
 				</ul>
@@ -90,21 +97,20 @@
 
 			<div id="labs" class="box">
 
-				<h2>Labs</h2>
+				<h3>Labs</h3>
 
 				<hr>
 
 				<ul>
-					<li><a href="Student_page.html"> Lab 1: Student Page</a></li>
-					<li><a href="lab_2/lab_02.html"> Lab 2: Currency Converter</a></li>
-					<li><a href="lab_3/lab_03.html"> Lab 3: Cart w/ Funds</a></li>
-					<li><a href="lab_4/photogal.html"> Lab 4: Photo Gallery w/ for loop</a></li>
-					<li><a href="lab_5/lab_05.html"> Lab 5: Password Validator</a></li>
-					<li><a href="lab_6/lab_06.html"> Lab 6: Password Validator w/ Reg Exp</a></li>
-					<li><a href="lab_7/lab.html"> Lab 7: Dynamic Photo Gallery</a></li>
-					<li><a href="lab_8/lab.html"> Lab 8: Contact List</a></li>
-					<li><a href="lab_9/movies.html"> Lab 9: Movie Search</a></li>
-					<li><a href="lab_10/dashboard.html"> Lab 10: Local Storage</a></li>
+					
+					<li><a href="itp_301/lab_2/lab_02.html"> Lab 1: Currency Converter</a></li>
+					<li><a href="itp_301/lab_3/lab_03.html"> Lab 2: Cart w/ Funds</a></li>
+					<li><a href="itp_301/lab_5/lab_05.html"> Lab 3: Password Validator</a></li>
+					<li><a href="itp_301/lab_6/lab_06.html"> Lab 4: Password Validator w/ Reg Exp</a></li>
+					<li><a href="itp_301/lab_7/lab.html"> Lab 5: Dynamic Photo Gallery</a></li>
+					<li><a href="itp_301/lab_8/lab.html"> Lab 6: Contact List</a></li>
+					<li><a href="itp_301/lab_9/movies.html"> Lab 7: Movie Search</a></li>
+					<li><a href="itp_301/lab_10/dashboard.html"> Lab 8: Local Storage</a></li>
 
 					
 
@@ -114,10 +120,63 @@
 			</div>
 
 
+		</div>
+
+		<div class="clearfloat"></div>
+
+		<!-- <div class="stuff">
+
+
+			<h2> Web Publishing </h2>
+
+			
+			<div id="assignments" class="box">
+
+				<h3>Assignments</h3>
+
+				<hr>
+				
+				<ul>
+				<li><a href="itp_104/assignment_05/assignment_05.html">Assignment 1: Interest Page</a></li>
+				<li><a href="itp_104/Calendar.html">Assignment 2: Calendar</a></li>
+				
+
+				</ul>
+
+			</div>
+
+			<div id="labs" class="box">
+
+				<h3>Labs</h3>
+
+				<hr>
+
+				<ul>
+				
+					<li><a href="itp_104/lab_2/lab_02.html"> Lab 2: Currency Converter</a></li>
+					<li><a href="itp_104/lab_3/lab_03.html"> Lab 3: Cart w/ Funds</a></li>
+					<li><a href="itp_104/lab_4/photogal.html"> Lab 4: Photo Gallery w/ for loop</a></li>
+					<li><a href="itp_104/lab_5/lab_05.html"> Lab 5: Password Validator</a></li>
+					<li><a href="itp_104/lab_6/lab_06.html"> Lab 6: Password Validator w/ Reg Exp</a></li>
+					<li><a href="itp_104/lab_7/lab.html"> Lab 7: Dynamic Photo Gallery</a></li>
+					<li><a href="itp_104/lab_8/lab.html"> Lab 8: Contact List</a></li>
+					<li><a href="itp_104/lab_9/movies.html"> Lab 9: Movie Search</a></li>
+					<li><a href="itp_104/lab_10/dashboard.html"> Lab 10: Local Storage</a></li>
+
+					
+
+
+				</ul>
+				
+			</div> 
 
 
 		</div>
 
+
+		<div class="clearfloat"></div>
+
+		<div class="stuff"></div> -->
 
 
 	</div>
@@ -125,7 +184,7 @@
 	<script>
 		
 		document.querySelector("#color").onclick = function(){
-			document.body.style.backgroundColor = "lightgreen"
+			document.body.style.backgroundColor = "#7ACD83"
 		}
 
 	</script>
