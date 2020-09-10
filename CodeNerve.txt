@@ -1,13 +1,13 @@
 
-<span id="a">Hi! </span> I'm Aaron Rad
+<span id="a">Hi!</span> I'm Aaron Rad
 
-<span id="red">University of Southern California</span>
-
+<span id="b">University of Southern California</span>
 Major: Business Administration
-<!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 Minor: Web Technologies and Applications
 
-<p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
+<!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+
+<a href="aaronrad.pdf" target="_blank">Resume</a>
 
 Check out my vegan dessert company: <span id="c"><a href="https://sweetzendesserts.com/"> Sweet Zen Desserts</span></a>
 
