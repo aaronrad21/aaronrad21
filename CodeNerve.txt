@@ -5,11 +5,13 @@
 Major: Business Administration
 Minor: Web Technologies and Applications
 
-<!-- laglaglaglaglaglaglaglaglaglaglaglag -->
+<!-- laglaglaglaglaglaglaglag -->
 
 <a href="aaronrad.pdf" target="_blank">Resume</a>
 
-Check out my vegan dessert company: <span id="c"><a href="https://sweetzendesserts.com/"> Sweet Zen Desserts</span></a>
+<!-- laglaglaglaglaglaglaglag -->
+
+Check out my vegan dessert company: <a href="https://sweetzendesserts.com/"> Sweet Zen Desserts </a>
 
 <p> Portfolio: 
 <br> <a href="Student_page.html">Web Development</a> 
