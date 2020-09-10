@@ -1,21 +1,29 @@
 
-<span id="a">Hi!</span>I'm Aaron Rad
-<!-- kjsdfhkjdhsfkjdshfkj -->
-<br>
+<p> <span id="a">Hi!</span>I'm Aaron Rad </p>
 
-Major: Business Administration
+<!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+
+<p>Major: Business Administration</p>
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Minor: Web Technologies and Applications</p>
 
-<p><a href="aaronrad.pdf">Resume</a></p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p><a href="aaronrad.pdf">Resume</a></p>
 
-<br>
-
-Give your project links or something like that. <a href="link"> Here you go</a>.</p><!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
+<!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 
 
-<p> You can give links to other professional profiles you have on Internet, here: <br> <a href="link1">Profile1</a> <br> <a href="link2">Profile2</a> and <br> <a href="link3">Profile3</a>.</p>
+Check out my vegan dessert company: <a href="sweetzendesserts.com"> Sweet Zen Desserts</a>.</p>
 
-You can also give your email ID for contacting you<!-- slightdelayhere-->, feel free to send me an email at <!-- longlonglongcomment --><a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a>
+<!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
+
+
+<p> Portfolio: 
+<br> <a href="student_page.html">Web Development</a> 
+<br> <a href="link2">Data Analytics</a>
+<br> <a href="link3">Digital Marketing</a>
+<br> <a href="link3">UI/UX</a>
+</p>
+
+<p>Feel free to send me an email at <!-- longlonglongcomment --><a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
 
 "<span id="k">Fight On!</span>"
