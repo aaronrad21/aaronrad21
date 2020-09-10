@@ -3,6 +3,8 @@
 
 <!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 
+<p><span id="red">University of Southern California</span></p>
+
 <p>Major: Business Administration</p>
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Minor: Web Technologies and Applications</p>
