@@ -1,7 +1,5 @@
 
-<p> <span id="a">Hi!</span>I'm Aaron Rad </p>
-
-<!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p> <span id="a">Hi! </span>I'm Aaron Rad </p>
 
 <p><span id="red">University of Southern California</span></p>
 
@@ -11,13 +9,7 @@
 
 <p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
-<!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
-
-
-Check out my vegan dessert company: <a href="sweetzendesserts.com"> Sweet Zen Desserts</a>.</p>
-
-<!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
-
+<p>Check out my vegan dessert company: <a href="sweetzendesserts.com"> Sweet Zen Desserts</a>.</p>
 
 <p> Portfolio: 
 <br> <a href="student_page.html">Web Development</a> 
