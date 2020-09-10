@@ -9,7 +9,7 @@ Minor: Web Technologies and Applications
 
 <p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
-Check out my vegan dessert company: <span id="c"><a href="sweetzendesserts.com"> Sweet Zen Desserts</span></a>
+Check out my vegan dessert company: <span id="c"><a href="https://sweetzendesserts.com/"> Sweet Zen Desserts</span></a>
 
 <p> Portfolio: 
 <br> <a href="Student_page.html">Web Development</a> 
