@@ -19,6 +19,6 @@ Check out my vegan dessert company: <a href="https://sweetzendesserts.com/" targ
 <br> <a href="https://www.figma.com/proto/hszA5Q3SSVgJBIEJMvEBkF/Mobile?node-id=64%3A931&scaling=min-zoom" target="_blank">UI/UX</a>
 </p>
 
-<p>Feel free to send me an email at <!-- longlonglongcomment --><a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
+<p>Feel free to send me an email at <!-- longcomment --> <a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
 
 "<span id="k">Fight On!</span>"
