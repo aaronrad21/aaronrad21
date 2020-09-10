@@ -9,7 +9,7 @@
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Minor: Web Technologies and Applications</p>
 
-<p><a href="aaronrad.pdf">Resume</a></p>
+<p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
 <!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 
