@@ -1,14 +1,13 @@
 
-<span id="a">Hi!</span><span id="b"></span><span id="c"></span>I'm Aaron Rad<!-- kjsdfhkjdhsfkjdshfkj -->
+<span id="a">Hi!</span>I'm Aaron Rad
+<!-- kjsdfhkjdhsfkjdshfkj -->
 <br>
-
- <!-- sjkfhskjf -->
 
 Major: Business Administration
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Minor: Web Technologies and Applications</p>
 
-<p><a href="aronrad.pdf">Resume</a></p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p><a href="aaronrad.pdf">Resume</a></p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 
 <br>
 
