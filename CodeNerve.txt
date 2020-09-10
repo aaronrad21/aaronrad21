@@ -7,7 +7,7 @@ Minor: Web Technologies and Applications
 
 <!-- laglaglaglaglaglaglaglag -->
 
-<a href="aaronrad.pdf" target="_blank">Resume</a>
+<p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
 
 <!-- laglaglaglaglaglaglaglag -->
 
@@ -17,7 +17,7 @@ Check out my vegan dessert company: <a href="https://sweetzendesserts.com/"> Swe
 <br> <a href="Student_page.html">Web Development</a> 
 <br> <a href="link2">Data Analytics</a>
 <br> <a href="link3">Digital Marketing</a>
-<br> <a href="link3">UI/UX</a>
+<br> <a href="https://www.figma.com/proto/hszA5Q3SSVgJBIEJMvEBkF/Mobile?node-id=64%3A931&scaling=min-zoom">UI/UX</a>
 </p>
 
 <p>Feel free to send me an email at <!-- longlonglongcomment --><a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
