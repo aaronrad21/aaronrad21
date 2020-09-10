@@ -8,9 +8,9 @@ Major: Business Administration
 <!-- laglaglaglaglaglaglaglaglaglaglaglag -->
 <p>Minor: Web Technologies and Applications</p>
 
-<p><a href="aronrad.pdf"> Resume </a>.</p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p><a href="aronrad.pdf">Resume</a></p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 
-<br><br><br>
+<br>
 
 Give your project links or something like that. <a href="link"> Here you go</a>.</p><!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
 
