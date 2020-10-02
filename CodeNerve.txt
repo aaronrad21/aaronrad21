@@ -15,7 +15,7 @@ Check out my vegan dessert company: <a href="https://sweetzendesserts.com/" targ
 <p> Portfolio: 
 <br> <a href="Student_page.html" target="_blank">Web Development</a> 
 <br> <a href="data_analytics.html" target="_blank">Data Analytics</a>
-<br> <a href="https://www.figma.com/proto/hszA5Q3SSVgJBIEJMvEBkF/Mobile?node-id=64%3A931&scaling=min-zoom" target="_blank">UI/UX</a>
+<br> <a href="UI_UX/littie.html" target="_blank">UI/UX</a>
 </p>
 
 <p>Feel free to send me an email at <!-- longcomment --> <a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
