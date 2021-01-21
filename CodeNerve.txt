@@ -3,7 +3,7 @@
 
 <span id="b">University of Southern California</span>
 Major: Business Administration
-Minor: Web Technologies and Applications
+Specialization: Digital Entrepreneurship
 
 <!-- laglaglaglaglaglaglaglag -->
 
