@@ -2,12 +2,7 @@
 <span id="a">Hi!</span> I'm Aaron Rad
 
 <span>
-4 years ago, I was put into a conversion therapy program shortly after coming out.
-In these sessions, I started to disassociate from reality and my preconceived identity.
-For years, I was drifting through life; subconsciously suffering from my previous experiences. 
-My inability to cope with prior trauma was not only hurting me, but the people around me as well. 
-In attempt to heal past wounds, I documented my conversion therapy experience in the form of music. 
-With the help of a friend, I was able to draw out my pain and transform it into something beautiful, <span id="b">suffering ID</span>.
+4 years ago, I was put into a conversion therapy program shortly after coming out. <!-- laglag -->In these sessions, I started to disassociate from reality and my preconceived identity. <!-- laglag -->For years, I was drifting through life; subconsciously suffering from my previous experiences. <!-- laglag -->My inability to cope with prior trauma was not only hurting me, but the people around me as well. <!-- laglag -->In attempt to heal past wounds, I documented my conversion therapy experience in the form of music. <!-- laglag -->With the help of a friend, I was able to draw out my pain and transform it into something beautiful, <span id="b">suffering ID</span>.
 </span>
 
 <!-- laglaglaglaglaglaglaglag -->
