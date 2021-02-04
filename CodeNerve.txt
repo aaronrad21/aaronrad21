@@ -1,23 +1,27 @@
 
 <span id="a">Hi!</span> I'm Aaron Rad
 
-<span id="b">University of Southern California</span>
-Major: Business Administration
-Specialization: Digital Entrepreneurship
+<span>
+4 years ago, I was put into a conversion therapy program shortly after coming out.
+In these sessions, I started to disassociate from reality and my preconceived identity.
+For years, I was drifting through life; subconsciously suffering from my previous experiences. 
+My inability to cope with prior trauma was not only hurting me, but the people around me as well. 
+In attempt to heal past wounds, I documented my conversion therapy experience in the form of music. 
+With the help of a friend, I was able to draw out my pain and transform it into something beautiful, <span id="b">suffering ID</span>.
+
+</span>
 
 <!-- laglaglaglaglaglaglaglag -->
 
-<p><a href="aaronrad.pdf" target="_blank">Resume</a></p>
+<p><a href="http://www.uscannenbergmedia.com/2019/12/04/marshall-student-makes-music-about-his-experience-in-conversion-therapy/" target="_blank">USC Annenberg Media</a></p>
 
-
-Check out my vegan dessert company: <a href="https://sweetzendesserts.com/" target="_blank"> Sweet Zen Desserts </a>
-
-<p> Portfolio: 
-<br> <a href="Student_page.html" target="_blank">Web Development</a> 
-<br> <a href="data_analytics.html" target="_blank">Data Analytics</a>
-<br> <a href="UI_UX/littie.html" target="_blank">UI/UX</a>
+<p>
+<br> <a href="https://open.spotify.com/artist/68iBhEoKzJRLnpkZwHwGzk" target="_blank">Spotify</a> 
+<br> <a href="https://music.apple.com/artist/1548848283" target="_blank">Apple Music</a>
 </p>
 
-<p>Feel free to send me an email at <!-- longcomment --> <a href="mailto:aaronrad@usc.edu"> aaronrad@usc.edu</a></p>
-
-"<span id="k">Fight On!</span>"
+<p>
+<br> <a href="https://www.instagram.com/aaronmrad/" target="_blank">@aaronmrad</a> 
+<br> <a href="https://www.instagram.com/djaysof/" target="_blank">@djaysof</a>
+<br> <a href="https://www.instagram.com/sufferingid/" target="_blank">@sufferingid</a>
+</p>
