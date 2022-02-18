@@ -2,15 +2,24 @@
 <span id="a">Hi!</span> I'm Aaron Rad
 
 <span>
-4 years ago, I was put into a conversion therapy program shortly after coming out. <!-- laglag -->In these sessions, I started to disassociate from reality and my preconceived identity. <!-- laglag -->For years, I was drifting through life; subconsciously suffering from my previous experiences. <!-- laglag -->My inability to cope with prior trauma was not only hurting me, but the people around me as well. <!-- laglag -->In attempt to heal past wounds, I documented my conversion therapy experience in the form of music. <!-- laglag -->With the help of a friend, I was able to draw out my pain and transform it into something beautiful, <span id="b">suffering ID</span>.
+<span id="b">University of Southern California</span>
+<span id="b">Major: Business Administration</span>
+<span id="b">Specialization: Digital Entrepreneurship and Web Technologies</span>
 </span>
-<!-- laglaglag -->
 
-<br> <a href="https://open.spotify.com/artist/68iBhEoKzJRLnpkZwHwGzk" target="_blank">Spotify</a> 
-<br> <a href="https://music.apple.com/artist/1548848283" target="_blank">Apple Music</a>
+<!-- laglaglaglaglaglaglaglag -->
 
-<br> <a href="https://www.instagram.com/aaronmrad/" target="_blank">@aaronmrad</a> 
-<br> <a href="https://www.instagram.com/djaysof/" target="_blank">@djaysof</a>
-<br> <a href="https://www.instagram.com/sufferingid/" target="_blank">@sufferingid</a>
+<p> <a href="aaronrad.pdf" target="_blank">Resume</a> </p>
 
-<br> <a href="mailto:aaronrad21@gmail.com">aaronrad21@gmail.com</a>
+<p>
+<br> <a href="student_page.html" target="_blank">Web Development</a>
+<br> <a href="data_analytics.html" target="_blank">Data Analytics</a>
+<br> <a href="google_analytics.pdf" target="_blank">Digital Marketing</a>
+<br> <a href="https://www.figma.com/proto/hszA5Q3SSVgJBIEJMvEBkF/Mobile?node-id=64%3A931&scaling=min-zoom" target="_blank">UI/UX</a>
+</p>
+
+<p>
+<a href="mailto:aaronrad121@gmail.com">aaronrad121@gmail.com</a>
+</p>
+
+
