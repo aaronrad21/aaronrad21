@@ -3,8 +3,8 @@
 
 <span>
 <span id="b">University of Southern California</span>
-<span id="b">Major: Business Administration</span>
-<span id="b">Specialization: Digital Entrepreneurship and Web Technologies</span>
+<span">Major: Business Administration</span>
+<span>Specialization: Digital Entrepreneurship and Web Technologies</span>
 </span>
 
 <!-- laglaglaglaglaglaglaglag -->
@@ -12,9 +12,8 @@
 <p> <a href="aaronrad.pdf" target="_blank">Resume</a> </p>
 
 <p>
-<br> <a href="student_page.html" target="_blank">Web Development</a>
+<br> <a href="Student_page.html" target="_blank">Web Development</a>
 <br> <a href="data_analytics.html" target="_blank">Data Analytics</a>
-<br> <a href="google_analytics.pdf" target="_blank">Digital Marketing</a>
 <br> <a href="https://www.figma.com/proto/hszA5Q3SSVgJBIEJMvEBkF/Mobile?node-id=64%3A931&scaling=min-zoom" target="_blank">UI/UX</a>
 </p>
 
