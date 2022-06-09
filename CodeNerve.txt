@@ -15,8 +15,8 @@
 <br> <a href="https://sweetzendesserts.com/" target="_blank">Sweet Zen Desserts</a>
 <br> <a href="Student_page.html" target="_blank">Web Development</a>
 <br> <a href="data_analytics.html" target="_blank">Data Analytics</a>
-<br> <a href="figma.html">UI/UX</a>
-<br> <a href="https://open.spotify.com/artist/68iBhEoKzJRLnpkZwHwGzk">Music Production</a>
+<br> <a href="figma.html" target="_blank">UI/UX</a>
+<br> <a href="https://open.spotify.com/artist/68iBhEoKzJRLnpkZwHwGzk" target="_blank">Music Production</a>
 </p>
 
 <p>
